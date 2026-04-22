@@ -90,8 +90,7 @@ export default function Team() {
         <div className="dogs-section">
           <div className="dogs-header">
             <span className="eyebrow">Furry QC Team</span>
-            <h3 className="dogs-heading">Every great nursery needs a dog.</h3>
-            <p className="dogs-subtext">We have two.</p>
+            <h3 className="dogs-heading">Meet our Furry Quality Control Team</h3>
           </div>
           <div className="dogs-cards">
             {dogs.map(dog => (
