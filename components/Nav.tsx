@@ -32,6 +32,10 @@ export default function Nav() {
       <div className="wrap">
         <a href="#" className="nav-brand">
           <Image src="/pts-logo.svg" alt="Priority Trees & Shrubs" width={160} height={52} priority />
+          <div className="nav-brand-name">
+            <span className="nav-brand-title">Priority Trees & Shrubs</span>
+            <span className="nav-brand-sub">Plant Material Supplier</span>
+          </div>
         </a>
         <div className="nav-links">
           {links.map(l => (
