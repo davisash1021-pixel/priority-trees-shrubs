@@ -160,6 +160,28 @@ input, select, textarea, button { font-family: inherit; }
 .dogs-list li { font-size: 14px; color: var(--gray-600); display: flex; gap: 8px; }
 .dogs-list li::before { content: '🐾'; font-size: 12px; }
 
+/* FURRY QC TEAM */
+.dogs-section { margin-top: 64px; }
+.dogs-header { text-align: center; margin-bottom: 36px; }
+.dogs-heading { font-family: var(--ff-head); font-size: clamp(22px, 2.5vw, 32px); font-weight: 900; color: var(--green-900); line-height: 1.2; }
+.dogs-subtext { font-size: 15px; color: var(--gray-600); margin-top: 4px; }
+.dogs-cards { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.dog-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--r-xl); padding: 36px 32px; width: 280px; text-align: center; transition: var(--t); box-shadow: var(--sh-sm); position: relative; overflow: hidden; }
+.dog-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--green-700), var(--orange)); }
+.dog-card:hover { transform: translateY(-4px); box-shadow: var(--sh-lg); }
+.dog-card-inner { display: flex; flex-direction: column; align-items: center; }
+.dog-photo-wrap { position: relative; margin-bottom: 18px; }
+.dog-photo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid var(--green-100); }
+.dog-paw { position: absolute; bottom: 2px; right: 2px; background: var(--orange); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; border: 2px solid #fff; }
+.dog-name { font-family: var(--ff-head); font-size: 22px; font-weight: 900; color: var(--green-900); margin-bottom: 4px; }
+.dog-title { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
+.dog-breed { font-size: 12.5px; color: var(--gray-400); margin-bottom: 0; }
+.dog-divider { width: 40px; height: 2px; background: var(--green-100); border-radius: 2px; margin: 16px auto; }
+.dog-stats { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.dog-stat { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; padding: 6px 10px; background: var(--sand); border-radius: var(--r-sm); }
+.dog-stat-label { color: var(--gray-600); font-weight: 500; }
+.dog-stat-value { color: var(--green-900); font-weight: 600; }
+
 /* TESTIMONIALS */
 .testi-header { text-align: center; margin-bottom: 52px; }
 .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }

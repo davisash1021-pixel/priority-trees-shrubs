@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const team = [
   {
     initials: 'PT',
@@ -22,6 +24,31 @@ const team = [
     name: 'Luca Tronzano',
     role: 'Sales & Quality Assurance',
     email: 'luca@prioritytreesandshrubs.com',
+  },
+];
+
+const dogs = [
+  {
+    photo: '/oshie.png',
+    name: 'Oshie',
+    title: 'Director of Team Morale',
+    breed: 'Siberian Husky · 9 years old',
+    stats: [
+      { label: 'Specialty', value: 'Emotional Support' },
+      { label: 'Superpower', value: 'Melting Hearts' },
+      { label: 'Favorite Tree', value: 'Anything to Dig Under' },
+    ],
+  },
+  {
+    photo: '/remi.png',
+    name: 'Remi',
+    title: 'Chief Tree Farm Inspector',
+    breed: 'Silver Lab · 10 years old',
+    stats: [
+      { label: 'Specialty', value: 'Quality Assurance' },
+      { label: 'Superpower', value: 'Sniffing Out Trouble' },
+      { label: 'Favorite Tree', value: 'The One with Shade' },
+    ],
   },
 ];
 
@@ -59,14 +86,42 @@ export default function Team() {
           ))}
         </div>
 
-        <div className="dogs-band">
-          <div className="dogs-icon">🐕</div>
-          <div>
-            <div className="dogs-title">Furry QC Team</div>
-            <ul className="dogs-list">
-              <li><strong>Odie</strong> — 9-year-old Husky, Director of Team Morale</li>
-              <li><strong>Remi</strong> — 10-year-old Silver Lab, Chief Tree Farm Inspector</li>
-            </ul>
+        {/* Furry QC Team */}
+        <div className="dogs-section">
+          <div className="dogs-header">
+            <span className="eyebrow">Furry QC Team</span>
+            <h3 className="dogs-heading">Every great nursery needs a dog.</h3>
+            <p className="dogs-subtext">We have two.</p>
+          </div>
+          <div className="dogs-cards">
+            {dogs.map(dog => (
+              <div key={dog.name} className="dog-card">
+                <div className="dog-card-inner">
+                  <div className="dog-photo-wrap">
+                    <Image
+                      src={dog.photo}
+                      alt={dog.name}
+                      width={140}
+                      height={140}
+                      className="dog-photo"
+                    />
+                    <div className="dog-paw">🐾</div>
+                  </div>
+                  <div className="dog-name">{dog.name}</div>
+                  <div className="dog-title">{dog.title}</div>
+                  <div className="dog-breed">{dog.breed}</div>
+                  <div className="dog-divider" />
+                  <div className="dog-stats">
+                    {dog.stats.map(s => (
+                      <div key={s.label} className="dog-stat">
+                        <span className="dog-stat-label">{s.label}</span>
+                        <span className="dog-stat-value">{s.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
